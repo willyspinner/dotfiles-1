@@ -2,6 +2,7 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+
 " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
 " source ~/.vimrc.before if it exists.
 if filereadable(expand("~/.vimrc.before"))
@@ -58,20 +59,20 @@ endif
 
 " ================ Indentation ======================
 
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+"set autoindent
+"set smartindent
+"set smarttab
+set shiftwidth=4
+"set softtabstop=4
+set tabstop=4
 set expandtab
 
 " Auto indent pasted text
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
-filetype plugin on
-filetype indent on
+filetype plugin indent on
+"filetype indent off
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
@@ -113,9 +114,33 @@ set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
-" ================ Security ==========================
-set modelines=0
-set nomodeline
-
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+" ---- willy ting: pathogen
+" willyedit fixing pathogen execute infect error
+set nocp
+""all pathogen#infect()
+
+nmap ]hs <Plug>GitGutterStageHunk
+nmap ]hu <Plug>GitGutterUndoHunk
+nmap ]hp <Plug>GitGutterPreviewHunk
+
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+
+
+
+" for boiler:
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+
+
+" for syntastic
+let g:syntastic_python_checkers=['python3']
+
+
+" for vim!
+nmap <Left> gT
+nmap <Right> gt
+
