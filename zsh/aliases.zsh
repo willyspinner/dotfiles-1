@@ -122,6 +122,7 @@ alias gds='git diff --staged -w'
 alias gpub='grb publish'
 alias gtr='grb track'
 alias gpl='git pull'
+alias gplo='git pull origin'
 alias gplr='git pull --rebase'
 alias gps='git push'
 alias gpsh='git push -u origin `git rev-parse --abbrev-ref HEAD`'
@@ -315,3 +316,7 @@ alias gmv="git mv"
 alias gob="go build"
 alias got="go test"
 alias gt="go test"
+
+alias ocaml="rlwrap ocaml"
+
+alias git="GIT_SSH_COMMAND='ssh -i ~/.ssh/gh_rsa -o IdentitiesOnly=yes' git"

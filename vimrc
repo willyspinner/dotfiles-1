@@ -144,3 +144,10 @@ let g:syntastic_python_checkers=['python3']
 nmap <Left> gT
 nmap <Right> gt
 
+
+" NERDTree Tabs
+cnoreabbrev W w
+cnoreabbrev NT NERDTreeTabsToggle
+cnoreabbrev NT NERDTreeTabsToggle
+
+
