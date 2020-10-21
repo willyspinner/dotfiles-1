@@ -146,8 +146,10 @@ nmap <Right> gt
 
 
 " NERDTree Tabs
+"
 cnoreabbrev W w
 cnoreabbrev NT NERDTreeTabsToggle
 cnoreabbrev NT NERDTreeTabsToggle
 
 
+unmap ss
