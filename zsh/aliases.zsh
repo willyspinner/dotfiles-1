@@ -320,3 +320,5 @@ alias gt="go test"
 alias ocaml="rlwrap ocaml"
 
 alias git="GIT_SSH_COMMAND='ssh -i ~/.ssh/gh_rsa -o IdentitiesOnly=yes' git"
+
+alias gpob='echo "pushing to $(git rev-parse --abbrev-ref HEAD)"; sleep 0.5; git push origin "$(git rev-parse --abbrev-ref HEAD)"'
